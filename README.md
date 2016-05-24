@@ -1,4 +1,4 @@
-# tax-filter
+# taxonomy-filter
 
 This component creates a bottom-positioned full-width slider of tag categories.
 If you click on the category, another slider that contains the tags within that
