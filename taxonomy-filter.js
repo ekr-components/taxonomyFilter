@@ -22,13 +22,6 @@ components.taxonomyFilter = function(el) {
 components.taxonomyFilter.prototype = {
 	init: function() {
 		var self = this;
-		jQuery(window).on('resize.tf', function() {
-			self.resize();
-		});
-		self.resize();
-	},
-	init: function() {
-		var self = this;
 		self.el.show();
 		self.el.find('[data-tf-target]').each(function() {
 			var tax = jQuery(this).data('tf-target');
@@ -45,6 +38,10 @@ components.taxonomyFilter.prototype = {
 		self.right.off('.tf').on('click.tf', function() {
 			self.slide('right');
 		});
+		jQuery(window).on('resize.tf', function() {
+			self.resize();
+		});
+		self.resize();
 	},
 	open: function(tax) {
 		var self = this;
